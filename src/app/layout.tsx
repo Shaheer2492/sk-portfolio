@@ -17,11 +17,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Shaheer Khan — Creative Developer",
-  description: "A portfolio where deep tech meets clean design.",
+  description: "A portfolio of Shaheer Khan's work.",
   metadataBase: new URL("https://shaheer2492.github.io/sk-portfolio"),
   openGraph: {
     title: "Shaheer Khan — Creative Developer",
-    description: "Deep tech × clean design.",
+    description: "Shaheer Khan's portfolio.",
     type: "website",
     url: "/",
   },

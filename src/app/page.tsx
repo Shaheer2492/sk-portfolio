@@ -104,13 +104,13 @@ function ContactSection() {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a 
-            href="mailto:your.email@example.com"
+            href="mailto:shk021@ucsd.edu"
             className="glass glass-hover px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition-all"
           >
-            📧 your.email@example.com
+            📧 shk021@ucsd.edu
           </a>
           <a 
-            href="https://linkedin.com/in/yourprofile"
+            href="https://linkedin.com/in/shaheer-k-622418193"
             target="_blank"
             rel="noopener noreferrer"
             className="glass glass-hover px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition-all"
@@ -118,7 +118,7 @@ function ContactSection() {
             💼 LinkedIn
           </a>
           <a 
-            href="https://github.com/yourusername"
+            href="https://github.com/Shaheer2492"
             target="_blank"
             rel="noopener noreferrer"
             className="glass glass-hover px-6 py-3 rounded-full text-sm font-medium hover:scale-105 transition-all"
@@ -195,24 +195,26 @@ export default function Home() {
             <article className="min-w-[85%] md:min-w-[540px] glass glass-hover rounded-2xl p-8 snap-start">
               <h3 className="font-semibold text-lg mb-3 text-fg-secondary dark:text-fg">Who I am</h3>
               <p className="text-sm text-fg-tertiary dark:text-muted leading-relaxed">
-                I'm Shaheer, a UCSD Data Science student and creative developer. I love building systems that
-                blend deep tech with clean, human interfaces—from robotics and AI–driven tools to polished
-                frontends in React and TypeScript.
+                I'm Shaheer, a UCSD Data Science student and full-stack developer. I specialize in building scalable 
+                education technology solutions, conducting computational neuroscience research, and developing 
+                data-driven applications with React, TypeScript, and Python.
               </p>
             </article>
             <article className="min-w-[85%] md:min-w-[540px] glass glass-hover rounded-2xl p-8 snap-start">
               <h3 className="font-semibold text-lg mb-3 text-fg-secondary dark:text-fg">Highlights</h3>
               <ul className="text-sm text-fg-tertiary dark:text-muted space-y-2 list-disc pl-5">
-                <li>Founded The Kaizen Academy to make learning practical and exciting.</li>
-                <li>Led the first IEEE Student Branch at a U.S. community college; won Rising Stars.</li>
-                <li>Built AI networking tools and XR experiments; funded drone project for pollution tracking.</li>
+                <li>Built and scaled The Kaizen Academy to $60,000+ revenue in 2 months as CEO & Co-Founder</li>
+                <li>Led Project DIANA to 1st place at EPICS IEEE Las Vegas Conference, securing $10,000 funding</li>
+                <li>Developed responsive UIs at QuickCruit.Ai, improving accessibility scores by 27%</li>
+                <li>Conducting computational neuroscience research on brain mapping using graph-based analysis</li>
               </ul>
             </article>
             <article className="min-w-[85%] md:min-w-[540px] glass glass-hover rounded-2xl p-8 snap-start">
               <h3 className="font-semibold text-lg mb-3 text-fg-secondary dark:text-fg">Now</h3>
               <p className="text-sm text-fg-tertiary dark:text-muted leading-relaxed">
-                Exploring Three.js visuals, system design, and shipping projects with performance-first craft.
-                Open to collaborations where code meets impact.
+                Currently pursuing my Bachelor's in Data Science at UCSD while developing brain-machine interface 
+                systems for neural signal processing. Building data visualizations, optimizing performance, 
+                and creating solutions where technology meets human impact.
               </p>
             </article>
           </div>

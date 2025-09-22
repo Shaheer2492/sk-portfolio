@@ -43,7 +43,7 @@ export default function ScrapbookPage() {
                 <span className="text-xs text-gray-500 ml-2">Personal Photo</span>
               </div>
               <p className="text-center font-handwriting text-gray-700 text-sm">
-                "Always learning, always growing 📚"
+                "UCSD Data Science • Research & Innovation"
               </p>
             </div>
           </motion.div>
@@ -61,7 +61,7 @@ export default function ScrapbookPage() {
                 <span className="text-xs text-gray-500 ml-2">Family Time</span>
               </div>
               <p className="text-center font-handwriting text-gray-700 text-sm">
-                "Family is everything ❤️"
+                "CEO @ The Kaizen Academy 🚀"
               </p>
             </div>
           </motion.div>
@@ -79,7 +79,7 @@ export default function ScrapbookPage() {
                 <span className="text-xs text-gray-500 ml-2">Late Night Coding</span>
               </div>
               <p className="text-center font-handwriting text-gray-700 text-sm">
-                "2 AM and still debugging 💻"
+                "Brain-Machine Interface Research 🧠"
               </p>
             </div>
           </motion.div>
@@ -97,7 +97,7 @@ export default function ScrapbookPage() {
                 <span className="text-xs text-gray-500 ml-2">Music Sessions</span>
               </div>
               <p className="text-center font-handwriting text-gray-700 text-sm">
-                "Finding rhythm in code and life 🎵"
+                "IEEE Student Chapter President 🏆"
               </p>
             </div>
           </motion.div>
@@ -115,7 +115,7 @@ export default function ScrapbookPage() {
                 <span className="text-xs text-gray-500 ml-2">Gaming Break</span>
               </div>
               <p className="text-center font-handwriting text-gray-700 text-sm">
-                "Strategy games = better problem solving 🎮"
+                "QuickCruit.Ai Software Engineer 💼"
               </p>
             </div>
           </motion.div>
@@ -133,7 +133,7 @@ export default function ScrapbookPage() {
                 <span className="text-xs text-gray-500 ml-2">Coffee Culture</span>
               </div>
               <p className="text-center font-handwriting text-gray-700 text-sm">
-                "Fueled by caffeine and curiosity ☕"
+                "Full-Stack Developer & Data Scientist ☕"
               </p>
             </div>
           </motion.div>
@@ -148,7 +148,7 @@ export default function ScrapbookPage() {
             transition={{ duration: 0.5, delay: 0.7 }}
           >
             <p className="text-gray-800 font-handwriting text-sm leading-relaxed">
-              "Every bug is just a feature waiting to be discovered... or fixed 😅"
+              "Built The Kaizen Academy to $60K+ revenue in just 2 months 🚀"
             </p>
           </motion.div>
 
@@ -159,7 +159,7 @@ export default function ScrapbookPage() {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <p className="text-gray-800 font-handwriting text-sm leading-relaxed">
-              "Life's too short for boring code. Make it elegant, make it yours."
+              "Project DIANA: 1st place at IEEE Conference + $10K funding 🏆"
             </p>
           </motion.div>
 
@@ -170,7 +170,7 @@ export default function ScrapbookPage() {
             transition={{ duration: 0.5, delay: 0.9 }}
           >
             <p className="text-gray-800 font-handwriting text-sm leading-relaxed">
-              "The best ideas come at 3 AM or during a walk. Never during meetings."
+              "Improved accessibility by 27% & reduced form errors by 35% 💻"
             </p>
           </motion.div>
         </div>
