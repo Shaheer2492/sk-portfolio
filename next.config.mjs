@@ -4,9 +4,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // If deploying to github.io/repository-name, add basePath
-  // basePath: '/sk-portfolio',
-  // assetPrefix: '/sk-portfolio/',
+  // Configure for GitHub Pages deployment to username.github.io/repository-name
+  basePath: '/sk-portfolio',
+  assetPrefix: '/sk-portfolio/',
+  trailingSlash: true,
 };
 
 export default nextConfig;

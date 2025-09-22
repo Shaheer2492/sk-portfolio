@@ -3,11 +3,13 @@ import type { ReactNode } from "react";
 type LiquidButtonProps = {
   children: ReactNode;
   className?: string;
+  onClick?: () => void;
 };
 
-export default function LiquidButton({ children, className }: LiquidButtonProps) {
+export default function LiquidButton({ children, className, onClick }: LiquidButtonProps) {
   return (
     <button
+      onClick={onClick}
       className={`relative px-8 py-3.5 rounded-full text-sm font-medium overflow-hidden group transition-all duration-300 ${className ?? ""}`}
     >
       <span className="absolute inset-0 bg-gradient-to-r from-fg/90 to-fg dark:from-fg/80 dark:to-fg/90" />

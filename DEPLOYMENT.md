@@ -17,8 +17,8 @@ git push origin main
 5. The workflow will automatically trigger on the next push
 
 ### Step 3: Access Your Site
-- Your site will be available at: `https://[your-username].github.io/sk-portfolio/`
-- If you want a custom domain like `yourname.github.io`, rename your repository to `[your-username].github.io`
+- Your site will be available at: `https://shaheer2492.github.io/sk-portfolio/`
+- If you want a custom domain like `shaheer2492.github.io`, rename your repository to `shaheer2492.github.io` and remove the basePath from next.config.mjs
 
 ### For Custom Domain (Optional)
 If you have a custom domain:

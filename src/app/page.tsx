@@ -168,7 +168,9 @@ export default function Home() {
             </h1>
             <div className="mt-6 text-xl md:text-2xl text-fg-tertiary dark:text-muted tracking-wide">{roleLetters}</div>
             <div className="mt-8">
-              <LiquidButton>Explore Work</LiquidButton>
+              <LiquidButton onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+                Explore Work
+              </LiquidButton>
             </div>
           </div>
           <motion.div className="absolute bottom-10" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }}>
