@@ -43,7 +43,13 @@ function GradientMesh() {
 function ProjectsSection() {
   const active = useFilterStore((s) => s.activeTag);
   const setActive = useFilterStore((s) => s.setActiveTag);
-  const tags = Array.from(new Set(portfolio.projects.flatMap((p) => p.tech)));
+  // Only surface tags shared by 2+ projects so the filter row stays scannable.
+  const tagCounts = portfolio.projects
+    .flatMap((p) => p.tech)
+    .reduce((acc, t) => acc.set(t, (acc.get(t) ?? 0) + 1), new Map<string, number>());
+  const tags = Array.from(tagCounts.entries())
+    .filter(([, n]) => n >= 2)
+    .map(([t]) => t);
   const filtered = active ? portfolio.projects.filter((p) => p.tech.includes(active)) : portfolio.projects;
   return (
     <motion.section
@@ -55,12 +61,21 @@ function ProjectsSection() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold">Featured Projects</h2>
+        <h2 className="text-3xl md:text-4xl font-bold">Projects</h2>
         <Filters tags={tags} active={active} onChange={setActive} />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
-        {filtered.slice(0, 6).map((p, idx) => (
-          <ProjectCard key={p.title} title={p.title} tech={p.tech} featured={idx === 0} />
+        {filtered.map((p) => (
+          <ProjectCard
+            key={p.title}
+            title={p.title}
+            tech={p.tech}
+            featured={p.featured}
+            description={p.description}
+            github={p.github}
+            live={p.live}
+            year={p.year}
+          />
         ))}
       </div>
     </motion.section>

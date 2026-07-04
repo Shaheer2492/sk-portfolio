@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/portfolio", "destination": "/", "permanent": true },
+    { "source": "/portfolio/:path*", "destination": "/", "permanent": true },
+    { "source": "/resume", "destination": "/", "permanent": true },
+    { "source": "/valima", "destination": "/wedding/valima", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/wedding", "destination": "https://wedding.shaheeralamkhan.com/wedding" },
+    { "source": "/wedding/:path*", "destination": "https://wedding.shaheeralamkhan.com/wedding/:path*" }
+  ]
+}

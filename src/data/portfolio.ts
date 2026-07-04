@@ -7,18 +7,133 @@ export const portfolio: PortfolioData = {
     tagline: "Building scalable solutions with performance-first craft",
   },
   projects: [
-    { title: "The Kaizen Academy", tech: ["React", "Node.js", "Stripe"], featured: true },
-    { title: "BioNexus Platform", tech: ["React", "TypeScript", "Node.js", "WebSocket"], featured: true },
-    { title: "Project DIANA", tech: ["Arduino", "C++", "Computer Vision", "IoT"], featured: true },
-    { title: "Columbia Analysis Dashboard", tech: ["React", "D3.js", "Data Visualization"] },
-    { title: "QuickCruit.Ai", tech: ["React", "TypeScript", "Redux"] },
-    { title: "Neural Signal Processing", tech: ["Python", "Machine Learning", "Data Analysis"] },
+    {
+      title: "The Kaizen Academy",
+      tech: ["Next.js", "Firebase", "Stripe", "Tailwind CSS"],
+      featured: true,
+      year: "2024",
+      live: "https://thekaizenacademy.com",
+      description:
+        "Education platform powering youth STEM camps and private tutoring — co-founded and scaled to $60,000+ revenue in its first two months.",
+    },
+    {
+      title: "Catan Online",
+      tech: ["React", "TypeScript", "Node.js", "Socket.io"],
+      year: "2026",
+      github: "https://github.com/Shaheer2492/Catan",
+      description:
+        "Real-time multiplayer Settlers of Catan with server-authoritative game state synchronized over WebSockets.",
+    },
+    {
+      title: "Longevity",
+      tech: ["React Native", "FastAPI", "PostgreSQL", "Machine Learning"],
+      featured: true,
+      year: "2026",
+      description:
+        "AI health platform that predicts biological age from wearable data, with device integrations and an AI health coach built on a LightGBM model.",
+    },
+    {
+      title: "VESPO",
+      tech: ["JavaScript", "D3.js", "Data Visualization"],
+      year: "2025",
+      live: "https://shaheeralamkhan.github.io/VESPO/",
+      github: "https://github.com/ShaheerAlamKhan/VESPO",
+      description:
+        "Visual Exploration of Surgical Procedures & Outcomes — interactive analysis of surgical data from a Korean hospital.",
+    },
+    {
+      title: "BCI Literacy Classifier",
+      tech: ["Python", "Machine Learning", "EEG", "Flask"],
+      featured: true,
+      year: "2026",
+      description:
+        "UCSD capstone predicting motor-imagery BCI literacy from EEG features — an end-to-end MNE and scikit-learn pipeline with an interactive demo API.",
+    },
+    {
+      title: "Cru App",
+      tech: ["SwiftUI", "iOS", "Firebase"],
+      year: "2026",
+      description:
+        "Native iOS community app with Apple Sign-In, events, and social features for a campus ministry.",
+    },
+    {
+      title: "Project DIANA",
+      tech: ["Arduino", "C++", "Computer Vision", "IoT"],
+      featured: true,
+      year: "2023",
+      description:
+        "Drone system detecting nitrogen pollution and volatile organic compounds with geolocated mapping — 1st place at IEEE EPICS Las Vegas with $10,000 in funding.",
+    },
+    {
+      title: "E-Waste Locator",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+      year: "2025",
+      live: "https://shaheeralamkhan.github.io/waste-disposal/",
+      github: "https://github.com/ShaheerAlamKhan/waste-disposal",
+      description:
+        "Web app helping San Diego residents find electronic-waste drop-off locations.",
+    },
+    {
+      title: "Bike Trax",
+      tech: ["JavaScript", "Data Visualization", "Maps"],
+      year: "2025",
+      live: "https://shaheeralamkhan.github.io/BikeAnalysis/",
+      github: "https://github.com/ShaheerAlamKhan/BikeAnalysis",
+      description:
+        "Immersive interactive map of Boston bike traffic across different times of day.",
+    },
+    {
+      title: "QuickCruit.Ai",
+      tech: ["React", "TypeScript", "Redux", "LLMs"],
+      year: "2024",
+      description:
+        "AI recruiting platform — built LLM-powered resume analysis and recommendation features and improved accessibility scores by 27%.",
+    },
+    {
+      title: "Columbia Vulnerability Dashboard",
+      tech: ["JavaScript", "D3.js", "Data Visualization"],
+      year: "2025",
+      live: "https://shaheeralamkhan.github.io/ColumbiaAnalysis/",
+      github: "https://github.com/ShaheerAlamKhan/ColumbiaAnalysis",
+      description:
+        "Interactive dashboard visualizing Columbia's climate and infrastructure vulnerabilities.",
+    },
+    {
+      title: "BioNexus",
+      tech: ["Node.js", "TypeScript", "REST APIs"],
+      year: "2025",
+      github: "https://github.com/ShaheerAlamKhan/BioNexus",
+      description:
+        "Smart API-integration hub linking biological databases through BioThings Explorer, with cross-database identifier mapping and data-quality pipelines.",
+    },
+    {
+      title: "Session AI",
+      tech: ["Python", "OpenAI API", "Pinecone"],
+      year: "2023",
+      description:
+        "AI-facilitated networking tool matching event attendees using profile embeddings and smart-device location data.",
+    },
+    {
+      title: "Financial Myths Analysis",
+      tech: ["Python", "Jupyter", "Data Visualization"],
+      year: "2025",
+      live: "https://shaheeralamkhan.github.io/FinanceMyths/",
+      github: "https://github.com/ShaheerAlamKhan/FinanceMyths",
+      description:
+        "Data-driven investigation of common personal-finance myths using exploratory analysis and interactive visuals.",
+    },
+    {
+      title: "Data Structures Tutoring Platform",
+      tech: ["C++", "Python", "Education"],
+      year: "2022",
+      description:
+        "Comprehensive learning materials covering C++, Python, data structures, and algorithms for computer-science students.",
+    },
   ],
   skills: [
-    "React", "TypeScript", "JavaScript", "Python", "Node.js", "Redux", 
-    "D3.js", "WebGL", "Machine Learning", "Data Visualization", "Git", 
-    "AWS", "Performance Optimization", "Responsive Design"
+    "React", "React Native", "Next.js", "TypeScript", "JavaScript", "Python",
+    "Node.js", "FastAPI", "SwiftUI", "Machine Learning", "D3.js", "WebGL",
+    "Data Visualization", "PostgreSQL", "Firebase", "AWS", "Git",
+    "Performance Optimization", "Responsive Design"
   ],
 };
-
-

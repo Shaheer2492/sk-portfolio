@@ -8,6 +8,10 @@ export interface ProjectItem {
   title: string;
   tech: string[];
   featured?: boolean;
+  description?: string;
+  github?: string;
+  live?: string;
+  year?: string;
 }
 
 export interface PortfolioData {
@@ -15,5 +19,3 @@ export interface PortfolioData {
   projects: ProjectItem[];
   skills: string[];
 }
-
-
