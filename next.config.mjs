@@ -12,9 +12,9 @@ const nextConfig = {
     ? {
         basePath: '/sk-portfolio',
         assetPrefix: '/sk-portfolio/',
+        trailingSlash: true,
       }
     : {}),
-  trailingSlash: true,
 };
 
 export default nextConfig;

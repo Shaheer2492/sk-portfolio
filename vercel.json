@@ -7,6 +7,7 @@
   ],
   "rewrites": [
     { "source": "/wedding", "destination": "https://wedding.shaheeralamkhan.com/wedding" },
-    { "source": "/wedding/:path*", "destination": "https://wedding.shaheeralamkhan.com/wedding/:path*" }
+    { "source": "/wedding/", "destination": "https://wedding.shaheeralamkhan.com/wedding/" },
+    { "source": "/wedding/:path+", "destination": "https://wedding.shaheeralamkhan.com/wedding/:path+" }
   ]
 }
