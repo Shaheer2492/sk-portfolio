@@ -6,15 +6,19 @@ type ProjectCardProps = {
   title: string;
   tech: string[];
   featured?: boolean;
+  description?: string;
+  github?: string;
+  live?: string;
+  year?: string;
 };
 
-export default function ProjectCard({ title, tech, featured }: ProjectCardProps) {
+export default function ProjectCard({ title, tech, featured, description, github, live, year }: ProjectCardProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rx = useSpring(useTransform(y, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 });
   const ry = useSpring(useTransform(x, [-0.5, 0.5], [-8, 8]), { stiffness: 200, damping: 20 });
 
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const px = (e.clientX - rect.left) / rect.width - 0.5; // -0.5..0.5
     const py = (e.clientY - rect.top) / rect.height - 0.5;
@@ -27,9 +31,11 @@ export default function ProjectCard({ title, tech, featured }: ProjectCardProps)
     y.set(0);
   }, [x, y]);
 
-  return (
+  const href = live ?? github;
+
+  const card = (
     <motion.article
-      className={`group glass glass-hover rounded-2xl p-6 relative overflow-hidden cursor-pointer ${featured ? "md:col-span-2" : ""}`}
+      className={`group glass glass-hover rounded-2xl p-6 relative overflow-hidden h-full ${href ? "cursor-pointer" : ""} ${featured ? "md:col-span-2" : ""}`}
       style={{ rotateX: rx, rotateY: ry, transformStyle: "preserve-3d" as const }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -42,13 +48,23 @@ export default function ProjectCard({ title, tech, featured }: ProjectCardProps)
             <div className="w-8 h-8 rounded-full bg-white/[0.05] dark:bg-white/[0.03]" />
           </div>
         </div>
-        <div className="absolute bottom-3 right-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/50 backdrop-blur-sm text-muted">
-          View Project
-        </div>
+        {year && (
+          <div className="absolute top-3 left-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/50 backdrop-blur-sm text-muted">
+            {year}
+          </div>
+        )}
+        {href && (
+          <div className="absolute bottom-3 right-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/50 backdrop-blur-sm text-muted">
+            {live ? "View Project" : "View Code"}
+          </div>
+        )}
       </div>
       <div className="flex items-center justify-between gap-2">
         <h3 className="font-semibold text-fg-secondary dark:text-fg">{title}</h3>
       </div>
+      {description && (
+        <p className="mt-2 text-sm text-fg-tertiary dark:text-muted leading-relaxed">{description}</p>
+      )}
       <div className="mt-3 flex flex-wrap gap-2">
         {tech.map((t) => (
           <span key={t} className="text-[11px] px-3 py-1 rounded-full bg-white/[0.03] dark:bg-white/[0.02] text-muted">
@@ -58,6 +74,11 @@ export default function ProjectCard({ title, tech, featured }: ProjectCardProps)
       </div>
     </motion.article>
   );
+
+  if (!href) return card;
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={`block h-full ${featured ? "md:col-span-2" : ""}`}>
+      {card}
+    </a>
+  );
 }
-
-
