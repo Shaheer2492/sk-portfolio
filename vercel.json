@@ -6,7 +6,7 @@
     { "source": "/valima", "destination": "/wedding/valima", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/wedding", "destination": "https://WEDDING-PRODUCTION-ALIAS.vercel.app/wedding" },
-    { "source": "/wedding/:path*", "destination": "https://WEDDING-PRODUCTION-ALIAS.vercel.app/wedding/:path*" }
+    { "source": "/wedding", "destination": "https://wedding-website-shaheers-projects-fce283df.vercel.app/wedding" },
+    { "source": "/wedding/:path*", "destination": "https://wedding-website-shaheers-projects-fce283df.vercel.app/wedding/:path*" }
   ]
 }
