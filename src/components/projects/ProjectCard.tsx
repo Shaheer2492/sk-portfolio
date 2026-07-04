@@ -10,9 +10,14 @@ type ProjectCardProps = {
   github?: string;
   live?: string;
   year?: string;
+  image?: string;
+  imageFit?: "cover" | "contain";
+  imageBg?: string;
 };
 
-export default function ProjectCard({ title, tech, featured, description, github, live, year }: ProjectCardProps) {
+export default function ProjectCard({
+  title, tech, featured, description, github, live, year, image, imageFit, imageBg,
+}: ProjectCardProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rx = useSpring(useTransform(y, [-0.5, 0.5], [8, -8]), { stiffness: 200, damping: 20 });
@@ -41,21 +46,40 @@ export default function ProjectCard({ title, tech, featured, description, github
       onMouseLeave={handleMouseLeave}
       whileHover={{ y: -4 }}
     >
-      <div className="aspect-video rounded-xl bg-gradient-to-br from-bg-secondary to-bg-tertiary overflow-hidden mb-4 relative group-hover:shadow-xl transition-shadow">
-        <div className="absolute inset-0 bg-gradient-to-t from-bg/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-white/[0.03] dark:bg-white/[0.02] backdrop-blur-sm grid place-items-center">
-            <div className="w-8 h-8 rounded-full bg-white/[0.05] dark:bg-white/[0.03]" />
+      <div
+        className={`aspect-video rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-shadow ${
+          imageBg ? "" : "bg-gradient-to-br from-bg-secondary to-bg-tertiary"
+        }`}
+        style={imageBg ? { backgroundColor: imageBg } : undefined}
+      >
+        {image ? (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={image}
+            alt={`${title} preview`}
+            loading="lazy"
+            className={`absolute inset-0 w-full h-full transition-all duration-500 ease-out ${
+              imageFit === "contain"
+                ? "object-contain p-8 group-hover:scale-105"
+                : "object-cover object-top saturate-[0.85] scale-[1.03] group-hover:saturate-100 group-hover:scale-100"
+            }`}
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-white/[0.03] dark:bg-white/[0.02] backdrop-blur-sm grid place-items-center">
+              <div className="w-8 h-8 rounded-full bg-white/[0.05] dark:bg-white/[0.03]" />
+            </div>
           </div>
-        </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-bg/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
         {year && (
-          <div className="absolute top-3 left-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/50 backdrop-blur-sm text-muted">
+          <div className="absolute top-3 left-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/60 backdrop-blur-sm text-fg-secondary dark:text-muted">
             {year}
           </div>
         )}
         {href && (
-          <div className="absolute bottom-3 right-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/50 backdrop-blur-sm text-muted">
-            {live ? "View Project" : "View Code"}
+          <div className="absolute bottom-3 right-3 text-[10px] px-3 py-1.5 rounded-full bg-bg/60 backdrop-blur-sm text-fg-secondary dark:text-muted translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+            {live ? "View Project ↗" : "View Code ↗"}
           </div>
         )}
       </div>
@@ -67,7 +91,7 @@ export default function ProjectCard({ title, tech, featured, description, github
       )}
       <div className="mt-3 flex flex-wrap gap-2">
         {tech.map((t) => (
-          <span key={t} className="text-[11px] px-3 py-1 rounded-full bg-white/[0.03] dark:bg-white/[0.02] text-muted">
+          <span key={t} className="text-[11px] px-3 py-1 rounded-full bg-black/[0.05] dark:bg-white/[0.02] text-fg-tertiary dark:text-muted">
             {t}
           </span>
         ))}

@@ -1,12 +1,24 @@
 "use client";
 import { useEffect, useMemo, useRef } from "react";
 import { useFilterStore } from "@/store/filters";
+import { portfolio } from "@/data/portfolio";
 
 type Node = { id: string; x: number; y: number; r: number };
+
+const FILTERABLE = new Set(portfolio.projects.flatMap((p) => p.tech));
 
 export default function Constellation({ skills }: { skills: string[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const setActive = useFilterStore((s) => s.setActiveTag);
+  const activeTag = useFilterStore((s) => s.activeTag);
+
+  // Filtering only makes sense for skills that appear on a project; selecting
+  // one also scrolls back up so the filtered grid is actually visible.
+  const selectSkill = (skill: string) => {
+    if (!FILTERABLE.has(skill)) return;
+    setActive(skill);
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
   const nodes = useMemo<Node[]>(() => {
     const n = skills.length;
     const arr: Node[] = [];
@@ -81,7 +93,7 @@ export default function Constellation({ skills }: { skills: string[] }) {
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
       const hit = nodes.find((n) => Math.hypot(n.x - x, n.y - y) < n.r);
-      if (hit) setActive(hit.id);
+      if (hit && FILTERABLE.has(hit.id)) setActive(hit.id);
     }
     canvas.addEventListener("click", onClick);
     return () => canvas.removeEventListener("click", onClick);
@@ -103,17 +115,29 @@ export default function Constellation({ skills }: { skills: string[] }) {
             const node = nodes[i];
             // Scale down the positioning to keep within bounds
             const scaleFactor = 0.35; // Reduce from 0.45 to keep more contained
+            const filterable = FILTERABLE.has(skill);
+            const isActive = activeTag === skill;
             return (
               <button
                 key={skill}
-                className="text-xs px-3 py-1.5 rounded-full bg-white/[0.03] dark:bg-white/[0.02] hover:bg-white/[0.05] dark:hover:bg-white/[0.03] text-muted hover:text-fg-tertiary dark:hover:text-fg-secondary transition-all cursor-pointer"
+                className={`text-xs px-3 py-1.5 rounded-full transition-all ${
+                  isActive
+                    ? "bg-fg text-bg"
+                    : "bg-black/[0.05] dark:bg-white/[0.02] text-fg-tertiary dark:text-muted"
+                } ${
+                  filterable
+                    ? "cursor-pointer hover:bg-black/[0.08] dark:hover:bg-white/[0.04] hover:text-fg-secondary dark:hover:text-fg-secondary"
+                    : "opacity-60 cursor-default"
+                }`}
                 style={{
                   position: 'absolute',
-                  left: `${50 + (node.x * scaleFactor)}%`,
-                  top: `${50 + (node.y * scaleFactor)}%`,
+                  // Rounded so the server and client render byte-identical styles.
+                  left: `${(50 + node.x * scaleFactor).toFixed(3)}%`,
+                  top: `${(50 + node.y * scaleFactor).toFixed(3)}%`,
                   transform: 'translate(-50%, -50%)'
                 }}
-                onClick={() => setActive(skill)}
+                onClick={() => selectSkill(skill)}
+                title={filterable ? `Filter projects by ${skill}` : undefined}
               >
                 {skill}
               </button>

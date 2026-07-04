@@ -13,7 +13,7 @@ export default function Filters({ tags, active, onChange }: FiltersProps) {
         className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
           active === null 
             ? "bg-fg text-bg dark:bg-fg dark:text-bg" 
-            : "glass glass-hover text-muted hover:text-fg-tertiary dark:hover:text-fg-secondary"
+            : "glass glass-hover text-fg-tertiary dark:text-muted hover:text-fg-secondary dark:hover:text-fg-secondary"
         }`}
       >
         All
@@ -25,7 +25,7 @@ export default function Filters({ tags, active, onChange }: FiltersProps) {
           className={`px-4 py-2 rounded-full text-xs font-medium transition-all ${
             active === t 
               ? "bg-fg text-bg dark:bg-fg dark:text-bg" 
-              : "glass glass-hover text-muted hover:text-fg-tertiary dark:hover:text-fg-secondary"
+              : "glass glass-hover text-fg-tertiary dark:text-muted hover:text-fg-secondary dark:hover:text-fg-secondary"
           }`}
         >
           {t}

@@ -3,7 +3,7 @@ import type { PortfolioData } from "@/types/portfolio";
 export const portfolio: PortfolioData = {
   hero: {
     name: "Shaheer Khan",
-    role: "Data Science Student & Full-Stack Developer",
+    role: "Data Scientist & Full-Stack Developer",
     tagline: "Building scalable solutions with performance-first craft",
   },
   projects: [
@@ -13,6 +13,9 @@ export const portfolio: PortfolioData = {
       featured: true,
       year: "2024",
       live: "https://thekaizenacademy.com",
+      image: "/images/kaizen-logo.png",
+      imageFit: "contain",
+      imageBg: "#0d1b2e",
       description:
         "Education platform powering youth STEM camps and private tutoring — co-founded and scaled to $60,000+ revenue in its first two months.",
     },
@@ -38,6 +41,7 @@ export const portfolio: PortfolioData = {
       year: "2025",
       live: "https://shaheeralamkhan.github.io/VESPO/",
       github: "https://github.com/ShaheerAlamKhan/VESPO",
+      image: "/images/projects/vespo.jpg",
       description:
         "Visual Exploration of Surgical Procedures & Outcomes — interactive analysis of surgical data from a Korean hospital.",
     },
@@ -70,6 +74,7 @@ export const portfolio: PortfolioData = {
       year: "2025",
       live: "https://shaheeralamkhan.github.io/waste-disposal/",
       github: "https://github.com/ShaheerAlamKhan/waste-disposal",
+      image: "/images/projects/ewaste.jpg",
       description:
         "Web app helping San Diego residents find electronic-waste drop-off locations.",
     },
@@ -79,6 +84,7 @@ export const portfolio: PortfolioData = {
       year: "2025",
       live: "https://shaheeralamkhan.github.io/BikeAnalysis/",
       github: "https://github.com/ShaheerAlamKhan/BikeAnalysis",
+      image: "/images/projects/biketrax.jpg",
       description:
         "Immersive interactive map of Boston bike traffic across different times of day.",
     },
@@ -90,13 +96,14 @@ export const portfolio: PortfolioData = {
         "AI recruiting platform — built LLM-powered resume analysis and recommendation features and improved accessibility scores by 27%.",
     },
     {
-      title: "Columbia Vulnerability Dashboard",
+      title: "Colombia Vulnerability Map",
       tech: ["JavaScript", "D3.js", "Data Visualization"],
       year: "2025",
       live: "https://shaheeralamkhan.github.io/ColumbiaAnalysis/",
       github: "https://github.com/ShaheerAlamKhan/ColumbiaAnalysis",
+      image: "/images/projects/colombia.jpg",
       description:
-        "Interactive dashboard visualizing Columbia's climate and infrastructure vulnerabilities.",
+        "Interactive map visualizing socioeconomic vulnerability across Colombia's regions.",
     },
     {
       title: "BioNexus",
@@ -119,6 +126,7 @@ export const portfolio: PortfolioData = {
       year: "2025",
       live: "https://shaheeralamkhan.github.io/FinanceMyths/",
       github: "https://github.com/ShaheerAlamKhan/FinanceMyths",
+      image: "/images/projects/financemyths.jpg",
       description:
         "Data-driven investigation of common personal-finance myths using exploratory analysis and interactive visuals.",
     },
@@ -128,6 +136,36 @@ export const portfolio: PortfolioData = {
       year: "2022",
       description:
         "Comprehensive learning materials covering C++, Python, data structures, and algorithms for computer-science students.",
+    },
+  ],
+  experience: [
+    {
+      role: "Co-Founder & CEO",
+      org: "The Kaizen Academy",
+      period: "2024 — Present",
+      summary:
+        "Built and scaled an education platform for youth STEM camps and tutoring to $60,000+ revenue in the first two months.",
+    },
+    {
+      role: "Neuroscience Researcher",
+      org: "UC San Diego",
+      period: "2025 — 2026",
+      summary:
+        "Computational neuroscience research on brain mapping with graph-based analysis; capstone on motor-imagery BCI literacy prediction.",
+    },
+    {
+      role: "Frontend Developer",
+      org: "QuickCruit.Ai",
+      period: "2024",
+      summary:
+        "Shipped responsive UI and LLM-powered resume analysis features, improving accessibility scores by 27%.",
+    },
+    {
+      role: "B.S. Data Science",
+      org: "UC San Diego — Halıcıoğlu Data Science Institute",
+      period: "Class of 2026",
+      summary:
+        "Graduated June 2026.",
     },
   ],
   skills: [

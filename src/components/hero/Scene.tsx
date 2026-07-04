@@ -1,6 +1,6 @@
 "use client";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
 function ParticleField() {
@@ -45,11 +45,28 @@ function ParticleField() {
 }
 
 export default function Scene() {
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(true);
+
+  // Stop rendering frames once the hero scrolls out of view — keeps the rest
+  // of the page at full frame rate and saves battery.
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([entry]) => setVisible(entry.isIntersecting), { threshold: 0 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <Canvas camera={{ position: [0, 0, 3.2], fov: 45 }} gl={{ antialias: true, alpha: true }}>
-      <ParticleField />
-    </Canvas>
+    <div ref={wrapRef} className="w-full h-full">
+      <Canvas
+        camera={{ position: [0, 0, 3.2], fov: 45 }}
+        gl={{ antialias: true, alpha: true }}
+        frameloop={visible ? "always" : "never"}
+      >
+        <ParticleField />
+      </Canvas>
+    </div>
   );
 }
-
-
