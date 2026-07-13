@@ -20,22 +20,6 @@ export const portfolio: PortfolioData = {
         "Education platform powering youth STEM camps and private tutoring — co-founded and scaled to $60,000+ revenue in its first two months.",
     },
     {
-      title: "Catan Online",
-      tech: ["React", "TypeScript", "Node.js", "Socket.io"],
-      year: "2026",
-      github: "https://github.com/Shaheer2492/Catan",
-      description:
-        "Real-time multiplayer Settlers of Catan with server-authoritative game state synchronized over WebSockets.",
-    },
-    {
-      title: "Longevity",
-      tech: ["React Native", "FastAPI", "PostgreSQL", "Machine Learning"],
-      featured: true,
-      year: "2026",
-      description:
-        "AI health platform that predicts biological age from wearable data, with device integrations and an AI health coach built on a LightGBM model.",
-    },
-    {
       title: "VESPO",
       tech: ["JavaScript", "D3.js", "Data Visualization"],
       year: "2025",
@@ -46,12 +30,14 @@ export const portfolio: PortfolioData = {
         "Visual Exploration of Surgical Procedures & Outcomes — interactive analysis of surgical data from a Korean hospital.",
     },
     {
-      title: "BCI Literacy Classifier",
-      tech: ["Python", "Machine Learning", "EEG", "Flask"],
+      title: "Longevity",
+      tech: ["React Native", "FastAPI", "PostgreSQL", "Machine Learning"],
       featured: true,
       year: "2026",
+      live: "https://ourlongevity.app",
+      image: "/images/projects/longevity.jpg",
       description:
-        "UCSD capstone predicting motor-imagery BCI literacy from EEG features — an end-to-end MNE and scikit-learn pipeline with an interactive demo API.",
+        "AI health platform that predicts biological age from wearable data, with device integrations and an AI health coach built on a LightGBM model.",
     },
     {
       title: "Cru App",
@@ -61,12 +47,12 @@ export const portfolio: PortfolioData = {
         "Native iOS community app with Apple Sign-In, events, and social features for a campus ministry.",
     },
     {
-      title: "Project DIANA",
-      tech: ["Arduino", "C++", "Computer Vision", "IoT"],
+      title: "BCI Literacy Classifier",
+      tech: ["Python", "Machine Learning", "EEG", "Flask"],
       featured: true,
-      year: "2023",
+      year: "2026",
       description:
-        "Drone system detecting nitrogen pollution and volatile organic compounds with geolocated mapping — 1st place at IEEE EPICS Las Vegas with $10,000 in funding.",
+        "UCSD capstone predicting motor-imagery BCI literacy from EEG features — an end-to-end MNE and scikit-learn pipeline with an interactive demo API.",
     },
     {
       title: "E-Waste Locator",
@@ -77,6 +63,14 @@ export const portfolio: PortfolioData = {
       image: "/images/projects/ewaste.jpg",
       description:
         "Web app helping San Diego residents find electronic-waste drop-off locations.",
+    },
+    {
+      title: "Project DIANA",
+      tech: ["Arduino", "C++", "Computer Vision", "IoT"],
+      featured: true,
+      year: "2023",
+      description:
+        "Drone system detecting nitrogen pollution and volatile organic compounds with geolocated mapping — 1st place at IEEE EPICS Las Vegas with $10,000 in funding.",
     },
     {
       title: "Bike Trax",
