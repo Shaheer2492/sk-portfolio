@@ -27,7 +27,7 @@ export const portfolio: PortfolioData = {
       github: "https://github.com/ShaheerAlamKhan/VESPO",
       image: "/images/projects/vespo.jpg",
       description:
-        "Visual Exploration of Surgical Procedures & Outcomes — interactive analysis of surgical data from a Korean hospital.",
+        "Surgical outcomes intelligence: an interactive D3 explorer over 6,400 live surgical cases (VitalDB) — beeswarm, sunburst, and risk-factor views with a full clinical design system.",
     },
     {
       title: "Longevity",
@@ -55,14 +55,14 @@ export const portfolio: PortfolioData = {
         "UCSD capstone predicting motor-imagery BCI literacy from EEG features — an end-to-end MNE and scikit-learn pipeline with an interactive demo API.",
     },
     {
-      title: "E-Waste Locator",
+      title: "ReCircuit",
       tech: ["Next.js", "TypeScript", "Tailwind CSS"],
       year: "2025",
       live: "https://shaheeralamkhan.github.io/waste-disposal/",
       github: "https://github.com/ShaheerAlamKhan/waste-disposal",
       image: "/images/projects/ewaste.jpg",
       description:
-        "Web app helping San Diego residents find electronic-waste drop-off locations.",
+        "Civic-tech recycling finder for San Diego e-waste — geolocation-sorted drop-off sites with live search, accepted-item filters, and an environmental impact estimator.",
     },
     {
       title: "Project DIANA",
@@ -73,14 +73,14 @@ export const portfolio: PortfolioData = {
         "Drone system detecting nitrogen pollution and volatile organic compounds with geolocated mapping — 1st place at IEEE EPICS Las Vegas with $10,000 in funding.",
     },
     {
-      title: "Bike Trax",
+      title: "CycleFlow",
       tech: ["JavaScript", "Data Visualization", "Maps"],
       year: "2025",
       live: "https://shaheeralamkhan.github.io/BikeAnalysis/",
       github: "https://github.com/ShaheerAlamKhan/BikeAnalysis",
-      image: "/images/projects/biketrax.jpg",
+      image: "/images/projects/cycleflow.jpg",
       description:
-        "Immersive interactive map of Boston bike traffic across different times of day.",
+        "Boston's bike traffic, hour by hour — a Mapbox + D3 flow map of 260K+ BlueBikes trips with a day-gradient time scrubber and dual light/dark basemaps.",
     },
     {
       title: "QuickCruit.Ai",
@@ -90,14 +90,14 @@ export const portfolio: PortfolioData = {
         "AI recruiting platform — built LLM-powered resume analysis and recommendation features and improved accessibility scores by 27%.",
     },
     {
-      title: "Colombia Vulnerability Map",
+      title: "Colombia Equity Atlas",
       tech: ["JavaScript", "D3.js", "Data Visualization"],
       year: "2025",
       live: "https://shaheeralamkhan.github.io/ColumbiaAnalysis/",
       github: "https://github.com/ShaheerAlamKhan/ColumbiaAnalysis",
-      image: "/images/projects/colombia.jpg",
+      image: "/images/projects/colombia-atlas.jpg",
       description:
-        "Interactive map visualizing socioeconomic vulnerability across Colombia's regions.",
+        "Data-journalism atlas mapping socioeconomic vulnerability across 1,100+ Colombian municipalities, 2007–2019, with an animated choropleth and regional driver analysis.",
     },
     {
       title: "BioNexus",
@@ -105,7 +105,7 @@ export const portfolio: PortfolioData = {
       year: "2025",
       github: "https://github.com/ShaheerAlamKhan/BioNexus",
       description:
-        "Smart API-integration hub linking biological databases through BioThings Explorer, with cross-database identifier mapping and data-quality pipelines.",
+        "Biomedical knowledge-graph API and explorer — unifies queries across biological databases via BioThings Explorer with cross-database ID mapping, a React dashboard, and Dockerized services.",
     },
     {
       title: "Session AI",
@@ -115,14 +115,14 @@ export const portfolio: PortfolioData = {
         "AI-facilitated networking tool matching event attendees using profile embeddings and smart-device location data.",
     },
     {
-      title: "Financial Myths Analysis",
-      tech: ["Python", "Jupyter", "Data Visualization"],
+      title: "Fact & Figure",
+      tech: ["JavaScript", "Plotly", "D3.js", "Data Visualization"],
       year: "2025",
       live: "https://shaheeralamkhan.github.io/FinanceMyths/",
       github: "https://github.com/ShaheerAlamKhan/FinanceMyths",
       image: "/images/projects/financemyths.jpg",
       description:
-        "Data-driven investigation of common personal-finance myths using exploratory analysis and interactive visuals.",
+        "Editorial data story debunking four money myths with interactive Plotly and D3 graphics — myth vs. verdict framing over SWIID and market data.",
     },
     {
       title: "Data Structures Tutoring Platform",
