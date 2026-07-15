@@ -319,7 +319,7 @@ export default function Home() {
             <article className="min-w-[85%] md:min-w-[540px] glass glass-hover rounded-2xl p-8 snap-start">
               <h3 className="font-semibold text-lg mb-3 text-fg-secondary dark:text-fg">Now</h3>
               <p className="text-sm text-fg-tertiary dark:text-muted leading-relaxed">
-                Freshly graduated from UCSD (June 2026) with a B.S. in Data Science. Currently building Longevity —
+                Freshly graduated from UCSD (March 2026) with a B.S. in Data Science. Currently building Longevity —
                 an AI health platform — growing The Kaizen Academy's summer programs, and exploring what's next
                 where machine learning meets human impact.
               </p>

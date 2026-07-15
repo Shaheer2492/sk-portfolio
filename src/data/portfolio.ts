@@ -51,6 +51,9 @@ export const portfolio: PortfolioData = {
       tech: ["Python", "Machine Learning", "EEG", "Flask"],
       featured: true,
       year: "2026",
+      live: "https://shaheer2492.github.io/BCI-Classifier/",
+      github: "https://github.com/Shaheer2492/BCI-Classifier",
+      image: "/images/projects/bci.jpg",
       description:
         "UCSD capstone predicting motor-imagery BCI literacy from EEG features — an end-to-end MNE and scikit-learn pipeline with an interactive demo API.",
     },
@@ -159,7 +162,7 @@ export const portfolio: PortfolioData = {
       org: "UC San Diego — Halıcıoğlu Data Science Institute",
       period: "Class of 2026",
       summary:
-        "Graduated June 2026.",
+        "Graduated March 2026.",
     },
   ],
   skills: [
